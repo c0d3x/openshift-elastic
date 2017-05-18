@@ -60,12 +60,17 @@ When using template in Minishift for testing purposes, you might want this setup
 	minishift addons enable anyuid
 
 	#Add more Memory:
-	minishift config set memory 8096
+	minishift config set memory 4096
 
 	#Start MiniShift Environment:
 	minishift start
 
 # OC - Command Line Interface
+    #Add OC CLI:
+    minishift oc-env
+    sudo subl ~/.bashrc
+    Add your own path here, ex:
+    PATH="/home/myUserName/minishift:/home/myUserName/.minishift/cache/oc/v1.5.0:$PATH"
 
     #Login Administrator:
     oc login -u system:admin
